@@ -11,4 +11,5 @@
         android:name="uz.ibrokhimov.mynewsapi.ui.fragment.HomeScreen"
         android:label="screen_home"
         tools:layout="@layout/screen_home" />
+
 </navigation>

@@ -26,11 +26,14 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return data.size
+         TODO()
     }
 
+
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
+
+
     }
 
 
