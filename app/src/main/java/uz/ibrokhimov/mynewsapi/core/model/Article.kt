@@ -2,6 +2,7 @@ package uz.ibrokhimov.mynewsapi.core.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Article(
     @SerializedName("author")
@@ -20,4 +21,4 @@ data class Article(
     val url: String?, // https://www.heise.de/news/Kotlin-lernt-WebAssembly-jetzt-aber-wirklich-9573392.html
     @SerializedName("urlToImage")
     val urlToImage: String? // https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/5/1/3/3/5/4/shutterstock_1128653108-aa4149ea32f19b5a.jpg
-)
+):Serializable

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="5dp"
@@ -12,6 +16,7 @@
         android:layout_height="130dp"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,14 +29,40 @@
                 android:layout_width="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textSize="20sp"
                 android:text="Text "
-                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20sp"
+                android:textStyle="italic"
                 android:id="@+id/titleText"
                 android:layout_height="wrap_content"/>
 
 
+            <TextView
+                android:layout_width="0dp"
+                android:paddingHorizontal="10dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                app:layout_constraintEnd_toStartOf="@id/newsImage"
+                android:textSize="20sp"
+                android:text="Text ngejbia bi aojnaovaj ivq eai gijar iajrno arn  ijaier nei rgjaeni bn argnj ei"
+                android:textColor="@color/black"
+                android:id="@+id/text"
+                android:layout_height="wrap_content"/>
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/newsImage"
+                app:layout_constraintHorizontal_bias="1"
+                android:src="#B59B9B"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                android:layout_marginEnd="15dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

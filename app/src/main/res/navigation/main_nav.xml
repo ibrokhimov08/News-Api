@@ -10,6 +10,19 @@
         android:id="@+id/homeScreen"
         android:name="uz.ibrokhimov.mynewsapi.ui.fragment.HomeScreen"
         android:label="screen_home"
-        tools:layout="@layout/screen_home" />
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/homeToDetail"
+            app:destination="@id/screenDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenDetail"
+        android:name="uz.ibrokhimov.mynewsapi.ui.fragment.ScreenDetail"
+        android:label="screen_detail"
+        tools:layout="@layout/screen_detail" >
+        <argument
+            android:name="articles"
+            app:argType="uz.ibrokhimov.mynewsapi.core.model.Article" />
+    </fragment>
 
 </navigation>
