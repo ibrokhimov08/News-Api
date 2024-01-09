@@ -9,9 +9,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
+import uz.ibrokhimov.mynewsapi.R
 import uz.ibrokhimov.mynewsapi.databinding.ScreenDetailBinding
 
-class ScreenDetail : Fragment() {
+class ScreenDetail : Fragment(R.layout.screen_detail) {
 
     private val binding by lazy { ScreenDetailBinding.inflate(layoutInflater) }
     private val args: ScreenDetailArgs by navArgs()

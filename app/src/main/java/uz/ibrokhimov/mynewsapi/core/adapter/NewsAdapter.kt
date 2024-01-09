@@ -26,11 +26,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
             binding.titleText.text = data.publishedAt
             binding.text.text = data.description
 
-            binding.root.setOnClickListener{
-                itemNewsClick?.invoke(data)
-            }
-
-            itemView.setOnClickListener {
+            binding.itemView.setOnClickListener {
                 itemNewsClick?.invoke(data)
             }
 

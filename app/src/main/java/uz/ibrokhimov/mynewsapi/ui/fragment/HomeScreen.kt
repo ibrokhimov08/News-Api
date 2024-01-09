@@ -15,7 +15,7 @@ import uz.ibrokhimov.mynewsapi.core.presenter.HomeMVP
 import uz.ibrokhimov.mynewsapi.core.presenter.HomePresenter
 import uz.ibrokhimov.mynewsapi.databinding.ScreenHomeBinding
 
-class HomeScreen : Fragment(), HomeMVP.View {
+class HomeScreen : Fragment(R.layout.screen_home), HomeMVP.View {
 
     private val binding by lazy { ScreenHomeBinding.inflate(layoutInflater) }
     private var presenter: HomeMVP.Presenter? = null
