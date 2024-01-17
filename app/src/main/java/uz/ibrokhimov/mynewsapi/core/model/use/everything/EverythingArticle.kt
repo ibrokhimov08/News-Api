@@ -1,10 +1,10 @@
-package uz.ibrokhimov.mynewsapi.core.model
+package uz.ibrokhimov.mynewsapi.core.model.use.everything
 
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class Article(
+data class EverythingArticle(
     @SerializedName("author")
     val author: String?, // Rainald Menge-Sonnentag
     @SerializedName("content")

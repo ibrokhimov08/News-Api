@@ -1,4 +1,4 @@
-package uz.ibrokhimov.mynewsapi.ui.base
+package uz.ibrokhimov.mynewsapi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

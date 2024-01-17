@@ -7,4 +7,12 @@
         <item name="cornerSize">20%</item>
 
     </style>
+
+    <style name="circleImageViewForMulti">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+
+    </style>
+
 </resources>

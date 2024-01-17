@@ -3,26 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/homeScreen">
+    app:startDestination="@id/mainScreen">
 
 
     <fragment
         android:id="@+id/homeScreen"
-        android:name="uz.ibrokhimov.mynewsapi.ui.fragment.HomeScreen"
+        android:name="uz.ibrokhimov.mynewsapi.ui.main.home.HomePage"
         android:label="screen_home"
         tools:layout="@layout/screen_home" >
-        <action
-            android:id="@+id/homeToDetail"
-            app:destination="@id/screenDetail" />
+
     </fragment>
     <fragment
         android:id="@+id/screenDetail"
-        android:name="uz.ibrokhimov.mynewsapi.ui.fragment.ScreenDetail"
+        android:name="uz.ibrokhimov.mynewsapi.ui.detail.ScreenDetail"
         android:label="screen_detail"
         tools:layout="@layout/screen_detail" >
         <argument
             android:name="articles"
-            app:argType="uz.ibrokhimov.mynewsapi.core.model.Article" />
+            app:argType="uz.ibrokhimov.mynewsapi.core.model.use.everything.EverythingArticle" />
     </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.ibrokhimov.mynewsapi.ui.main.main.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_screenDetail"
+            app:destination="@id/screenDetail" />
+        <action
+            android:id="@+id/action_mainScreen_to_saveScreen"
+            app:destination="@id/saveScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveScreen"
+        android:name="uz.ibrokhimov.mynewsapi.ui.main.save.SavePage"
+        android:label="screen_save"
+        tools:layout="@layout/screen_save" />
 
 </navigation>

@@ -1,16 +1,19 @@
 package uz.ibrokhimov.mynewsapi.core.presenter
 
-import uz.ibrokhimov.mynewsapi.core.model.NewsResponse
+import uz.ibrokhimov.mynewsapi.core.model.use.everything.EverythingNewsResponse
+import uz.ibrokhimov.mynewsapi.core.model.use.top_headline.TopHeadlineResponse
 
 interface HomeMVP {
 
     interface View{
-        fun setNewsData(data:NewsResponse)
+        fun setEverythingData(data: EverythingNewsResponse)
+        fun setHeadlineData(data: TopHeadlineResponse)
         fun setError(message: String)
         fun setNetworkError(s: String)
     }
     interface Presenter{
-        fun getNewsData()
+        fun getEverythingData(dataType:String)
+        fun getTopHeadline()
     }
 
 }

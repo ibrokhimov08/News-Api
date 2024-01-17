@@ -12,3 +12,4 @@ fun Fragment.myToast(text:String){
     Toast.makeText(this.requireContext(), text, Toast.LENGTH_SHORT).show()
 
 }
+

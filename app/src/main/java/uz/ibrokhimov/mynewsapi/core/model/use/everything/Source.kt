@@ -1,4 +1,4 @@
-package uz.ibrokhimov.mynewsapi.core.model
+package uz.ibrokhimov.mynewsapi.core.model.use.everything
 
 
 import com.google.gson.annotations.SerializedName

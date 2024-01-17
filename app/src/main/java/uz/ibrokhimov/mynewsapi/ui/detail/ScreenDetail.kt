@@ -1,4 +1,4 @@
-package uz.ibrokhimov.mynewsapi.ui.fragment
+package uz.ibrokhimov.mynewsapi.ui.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import uz.ibrokhimov.mynewsapi.R
 import uz.ibrokhimov.mynewsapi.databinding.ScreenDetailBinding
@@ -15,7 +14,7 @@ import uz.ibrokhimov.mynewsapi.databinding.ScreenDetailBinding
 class ScreenDetail : Fragment(R.layout.screen_detail) {
 
     private val binding by lazy { ScreenDetailBinding.inflate(layoutInflater) }
-    private val args: ScreenDetailArgs by navArgs()
+    private val args:ScreenDetailArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,

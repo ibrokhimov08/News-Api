@@ -4,15 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import uz.ibrokhimov.mynewsapi.core.model.Article
+import uz.ibrokhimov.mynewsapi.core.model.use.everything.EverythingArticle
 import uz.ibrokhimov.mynewsapi.databinding.ItemNewsBinding
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    private val data = ArrayList<Article?>()
-    var itemNewsClick: ((data:Article) -> Unit)? = null
+    private val data = ArrayList<EverythingArticle?>()
+    var itemNewsClick: ((data: EverythingArticle) -> Unit)? = null
 
-    fun setData(data: List<Article?>){
+    fun setData(data: List<EverythingArticle?>){
         this.data.clear()
         this.data.addAll(data)
         notifyDataSetChanged()
@@ -21,7 +21,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     inner class NewsViewHolder(private val binding: ItemNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bindData(data: Article) {
+        fun bindData(data: EverythingArticle) {
             binding.newsImage.load(data.urlToImage)
             binding.titleText.text = data.publishedAt
             binding.text.text = data.description
@@ -47,7 +47,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     override fun getItemCount(): Int = data.size
 
 
-    override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NewsAdapter.NewsViewHolder, position: Int) {
         holder.bindData(data[position]!!)
     }
 
